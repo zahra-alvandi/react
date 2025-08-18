@@ -8,7 +8,7 @@ function Product() {
                 <img src="img1.jpg" alt="" />
                 <h1>Samsung A51</h1>
                 <p className="price">$300</p>
-                <p>It is the best smart phone for 2021.It is the best smart phone for 2021.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, fugit.</p>
                 <p><button>Add To Cart</button></p>
             </div>
             <div className="card">
@@ -16,7 +16,7 @@ function Product() {
                 <img src="img2.jpg" alt="" />
                 <h1>Samsung A34</h1>
                 <p className="price">$1000</p>
-                <p>It is the best smart phone for 2024.It is the best smart phone for 2024.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, fugit.</p>
                 <p><button>Add To Cart</button></p>
             </div>
             <div className="card">
@@ -24,7 +24,7 @@ function Product() {
                 <img src="img3.jpg" alt="" />
                 <h1>Note 10</h1>
                 <p className="price">$1300</p>
-                <p>It is the best smart phone for 2024.It is the best smart phone for 2024.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, fugit.</p>
                 <p><button>Add To Cart</button></p>
             </div>
         </div>
