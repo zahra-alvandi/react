@@ -8,7 +8,9 @@ function App() {
 
   return (
   <div className='container'>
-    <Product></Product>
+    <Product title= "Samsung A34" img="public/img1.jpg" price={120}></Product>
+    <Product title= "Samsung A51" img="public/img2.jpg" price={180}></Product>
+    <Product title= "Note 10" img="public/img3.jpg" price={295}></Product>
   </div>
   )
 }
