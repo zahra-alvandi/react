@@ -6,11 +6,17 @@ import Product from "./Product/product"
 
 function App() {
 
+  const allProducts = [
+    {id:1, title: "Samsung A51", img: "public/img1.jpg", price: 150, count: 122},
+    {id:2, title: "Samsung A34", img: "public/img2.jpg", price: 180, count: 1},
+    {id:3, title: "Note 10", img: "public/img3.jpg", price: 295, count: 31},
+  ]
+
   return (
   <div className='container'>
-    <Product title= "Samsung A34" img="public/img1.jpg" price={128} count={12}></Product>
-    <Product title= "Samsung A51" img="public/img2.jpg" price={180} count={4}></Product>
-    <Product title= "Note 10" img="public/img3.jpg" price={295} count={0}></Product>
+    <Product title={allProducts[0].title} img={allProducts[0].img} price={allProducts[0].price} count={allProducts[0].count}></Product>
+    <Product {...allProducts[1]}></Product>  {/*using spread syntax*/}
+    <Product {...allProducts[2]}></Product>  {/*using spread syntax*/}
   </div>
   )
 }

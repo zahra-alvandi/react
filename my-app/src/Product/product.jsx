@@ -1,21 +1,36 @@
 import "./product.css"
 
-function Product(props) {
-    console.log(props);
+function Product({title, img, price, count}) {
+
+    // console.log(props);
+    // let {title, img, price , count} = props
 
     return(
-        props.count &&
-            <div>
+         <div>
             <div className="card">
-             <h2>{props.title}</h2>
-                 <img src={props.img} alt="" />
-                 <h1>Samsung A51</h1>
-                 <p className="price">{`$${props.price}`}</p>
+             <h2>{title}</h2>
+                 <img src={img} alt="" />
+                 <h1>{title}</h1>
+                 <p className="price">{`$${price}`}</p>
                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, fugit.</p>
                  <p><button>Add To Cart</button></p>
              </div>
         </div>
     )
+
+    // return(
+    //     props.count &&
+    //         <div>
+    //         <div className="card">
+    //          <h2>{props.title}</h2>
+    //              <img src={props.img} alt="" />
+    //              <h1>Samsung A51</h1>
+    //              <p className="price">{`$${props.price}`}</p>
+    //              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, fugit.</p>
+    //              <p><button>Add To Cart</button></p>
+    //          </div>
+    //     </div>
+    // )
     
 
     // if(props.count > 0) {
