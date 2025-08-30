@@ -8,7 +8,7 @@ function App() {
 
   const allProducts = [
     {id:1, title: "Samsung A51", img: "public/img1.jpg", price: 150, count: 122},
-    {id:2, title: "Samsung A34", img: "public/img2.jpg", price: 180, count: 1},
+    {id:2, title: "Samsung A34", img: "", price: 180, count: 1},
     {id:3, title: "Note 10", img: "public/img3.jpg", price: 295, count: 31},
   ]
 

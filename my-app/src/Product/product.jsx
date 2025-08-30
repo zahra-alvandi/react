@@ -1,16 +1,16 @@
 import "./product.css"
 
-function Product({title, img, price, count}) {
+function Product({title:productTitle, img = "/img1.jpg", price, count}) {
 
     // console.log(props);
     // let {title, img, price , count} = props
-
+    let title = "Product Card";
     return(
          <div>
             <div className="card">
              <h2>{title}</h2>
                  <img src={img} alt="" />
-                 <h1>{title}</h1>
+                 <h1>{productTitle}</h1>
                  <p className="price">{`$${price}`}</p>
                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, fugit.</p>
                  <p><button>Add To Cart</button></p>
@@ -87,5 +87,9 @@ function Product({title, img, price, count}) {
     //     // </div>
     // )
 }
+
+// Product.defaultProps = {
+//     img: 'vite.svg',
+// }
 
 export default Product
