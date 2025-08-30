@@ -1,6 +1,6 @@
 import "./product.css"
 
-function Product({title:productTitle, img = "/img1.jpg", price, count}) {
+function Product({title:productTitle, img = "vite.svg", price, count, children}) {
 
     // console.log(props);
     // let {title, img, price , count} = props
@@ -13,6 +13,7 @@ function Product({title:productTitle, img = "/img1.jpg", price, count}) {
                  <h1>{productTitle}</h1>
                  <p className="price">{`$${price}`}</p>
                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, fugit.</p>
+                 {children}
                  <p><button>Add To Cart</button></p>
              </div>
         </div>
