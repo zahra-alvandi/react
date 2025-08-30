@@ -1,0 +1,131 @@
+/* ===== Modal CSS برای ساختار داده شده با محتوا ===== */
+
+.cd-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(2, 6, 23, 0.65); /* بک‌دراپ تیره */
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+}
+
+.cd-popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.25s ease, visibility 0s;
+}
+
+/* جعبه مودال */
+.cd-popup-container {
+  position: relative;
+  width: min(92vw, 480px);
+  margin: 6rem auto;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  transform: translateY(30px) scale(0.96);
+  opacity: 0;
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease;
+}
+
+.cd-popup.is-visible .cd-popup-container {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* متن مودال */
+.cd-popup-container p {
+  padding: 20px 20px 0 20px;
+  font-size: 1rem;
+  color: #0f172a;
+  text-align: center;
+}
+
+/* دکمه‌ها */
+.cd-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.cd-buttons li a {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+/* بله */
+.cd-buttons li:first-child a {
+  background: #ef4444; /* red-500 */
+  color: #fff;
+}
+.cd-buttons li:first-child a:hover {
+  background: #dc2626; /* red-600 */
+}
+
+/* نه */
+.cd-buttons li:last-child a {
+  background: #e5e7eb; /* gray-200 */
+  color: #111827; /* gray-900 */
+}
+.cd-buttons li:last-child a:hover {
+  background: #d1d5db; /* gray-300 */
+}
+
+/* دکمه بستن گوشه بالا */
+.cd-popup-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border-radius: 8px;
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cd-popup-close::before {
+  content: "✕";
+  font-size: 18px;
+  color: #475569;
+  text-indent: 0;
+}
+.cd-popup-close:hover {
+  background: rgba(148, 163, 184, 0.15);
+}
+
+/* حالت تاریک */
+@media (prefers-color-scheme: dark) {
+  .cd-popup-container {
+    background: #0f172a;
+    color: #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  .cd-buttons li:last-child a {
+    background: #1e293b; /* slate-800 */
+    color: #e5e7eb;
+  }
+  .cd-buttons li:last-child a:hover {
+    background: #334155; /* slate-700 */
+  }
+  .cd-popup-close::before {
+    color: #cbd5e1;
+  }
+}
