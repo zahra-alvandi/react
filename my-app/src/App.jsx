@@ -25,12 +25,12 @@ function App() {
         <h2>OFF(25%)</h2>
       </Product>  using spread syntax */}
       <h1>SabzLearn</h1>
-      <Modal>
-        <p>Are you sure you want to delete this element?</p>
+      <Modal message="ثبت نام شما با شکست مواجه شد">
+        {/* <p>Are you sure you want to delete this element?</p>
         <ul className="cd-buttons">
           <li><a href="#">Yes</a></li>
           <li><a href="#">No</a></li>
-        </ul>
+        </ul> */}
       </Modal>
   </div>
   )
