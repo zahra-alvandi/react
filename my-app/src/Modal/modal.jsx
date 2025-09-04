@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "./modal.css"
+import propTypes from 'prop-types'
 
 // function Modal() {
 //     return (
@@ -25,7 +26,7 @@ export default class Modal extends Component {
             <div>
                 <div className='cd-popup is-visible' role='alert'>
                     <div className='cd-popup-container'>
-                        <p>{this.props.message}</p>
+                        <p>{this.props.state}</p>
                         <ul className='cd-buttons'>
                             <li><a href="#">تایید</a></li>
                             <li><a href="#">بازگشت</a></li>
@@ -39,6 +40,14 @@ export default class Modal extends Component {
 }
 
 
-Modal.defaultProps = {
-    message: "شما با موفقیت وارد پنل کاربریتان شدید"
+// Modal.defaultProps = {
+//     state: "شما با موفقیت وارد پنل کاربریتان شدید"
+// }
+
+// Modal.protoType = {
+//     state: propTypes.oneOf(["true", "false"])
+// }
+
+Modal.propTypes = {
+    state: propTypes.string.isRequired
 }

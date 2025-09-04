@@ -25,7 +25,7 @@ function App() {
         <h2>OFF(25%)</h2>
       </Product>  using spread syntax */}
       <h1>SabzLearn</h1>
-      <Modal message="پرداخت شما با موفقیت انجام شد">
+      <Modal state="پرداخت شما با موفقیت انجام شد">
         {/* <p>Are you sure you want to delete this element?</p>
         <ul className="cd-buttons">
           <li><a href="#">Yes</a></li>
