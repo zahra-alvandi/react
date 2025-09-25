@@ -115,40 +115,187 @@ import User from './User/user'
 
 // export default LiveInput
 
-class HoverBox extends Component {
+// class HoverBox extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {bg: "lightgray"};
+//     this.hanleEnter = this.hanleEnter.bind(this)
+//     this.handleLeave = this.handleLeave.bind(this)
+//   }
+
+//   hanleEnter () {
+//     this.setState({bg: "skyblue"})
+//   }
+
+//   handleLeave () {
+//     this.setState({bg: "lightgray"})
+//   }
+
+//   render() {
+//     return(
+//       <div 
+//         onMouseOver={this.hanleEnter}
+//         onMouseLeave={this.handleLeave}
+//         style={
+//           {
+//             width: 150,
+//             height: 150,
+//             backgroundColor: this.state.bg,
+//             magrin: 20
+//           }
+//         }
+//       >
+
+//       </div>
+//     )
+//   }
+// }
+
+// export default HoverBox
+
+// class SignupForm extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {name: "", email: ""};
+//     this.handleChange = this.handleChange.bind(this);
+//     this.handleClick = this.handleClick.bind(this)
+//   }
+
+//   handleChange(event) {
+//     this.setState({[event.target.name]: event.target.value});
+//   }
+
+//   handleClick(event) {
+//     event.preventDeafult();
+//     alert(`Name: ${this.state.name}\nEmail: ${this.state.email}`);
+//   }
+
+//   render() {
+//     const {name, email } = this.state;
+//     const disabled = !name || !email;
+//     return(
+//       <form action="" onSubmit={this.handleClick} style={{
+//         display: 'flex',
+//         flexDirection: "column",
+//         width: 250,
+//         gap: 10
+//       }}>
+//         <input type="text" placeholder='name' onChange={this.handleChange} />
+//         <input type="email" placeholder='email' onChange={this.handleChange} />
+//         <button type='sumbit' disabled={disabled} style={
+//           {width: 100,
+//             fontSize: 14
+//           }
+//         }>
+//           Submit
+//         </button>
+//       </form>
+//     )
+//   }
+// }
+
+// export default SignupForm
+
+// class todoList extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       todos: [
+//         "Learn React",
+//         "Learn Js",
+//         "Read a few pages of my book",
+//         "Drink Coffee"
+//       ]
+//     }
+//     this.deletItem = this.deletItem.bind(this);  
+//   }
+//   deletItem(index) {
+//     this.setState(prev => ({
+//       todos: prev.todos.filter((_,i) => i !==index)
+//     }))
+//   }
+
+//   render() {
+//     return(
+//       <ul className='parent'>
+//         {this.state.todos.map((item, idx) => (
+//           <li key={idx}>
+//             {item}
+//             <button onClick={() => this.deletItem(idx)} className='btn'>Delete</button>
+//           </li>
+//         ))}
+//       </ul>
+//     )
+//   }
+// }
+
+// export default todoList
+
+// class WelcomeBtn extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {message: ""};
+//     this.handleClick = this.handleClick.bind(this)
+//   }
+
+//   handleClick() {
+//     this.setState({message: "Hi :)"})
+//   }
+
+//   render() {
+//     return(
+//       <div style={{width:150}}>
+//         <button onClick={this.handleClick}>click here</button>
+//         <p>{this.state.message}</p>
+//       </div>
+//     )
+//   }
+// }
+
+// export default WelcomeBtn
+
+// class CharacterCounter extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { count: 0};
+//     this.handleChange = this.handleChange.bind(this)
+//   }
+
+//   handleChange(event) {
+//     this.setState({count: event.target.value.length})
+//   }
+
+//   render() {
+//     return(
+//       <div>
+//         <input onChange={this.handleChange} />
+//         <p>Characters count: {this.state.count}</p>
+//       </div>
+//     )
+//   }
+// }
+
+// export default CharacterCounter
+
+class ToggleText extends Component {
   constructor(props) {
-    super(props);
-    this.state = {bg: "lightgray"};
-    this.hanleEnter = this.hanleEnter.bind(this)
-    this.handleLeave = this.handleLeave.bind(this)
+    super(props)
+    this.state = {show: false};
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  hanleEnter () {
-    this.setState({bg: "skyblue"})
-  }
-
-  handleLeave () {
-    this.setState({bg: "lightgray"})
+  handleClick() {
+    this.setState(prev => ({show: !prev.show}))
   }
 
   render() {
     return(
-      <div 
-        onMouseOver={this.hanleEnter}
-        onMouseLeave={this.handleLeave}
-        style={
-          {
-            width: 150,
-            height: 150,
-            backgroundColor: this.state.bg,
-            magrin: 20
-          }
-        }
-      >
-
+      <div>
+        <button className='btn' onClick={this.handleClick}>show/hide</button>
+        {this.state.show && <p>Hello React</p>}
       </div>
     )
   }
 }
 
-export default HoverBox
+export default ToggleText
