@@ -5,6 +5,7 @@ import './App.css'
 import Product from "./Product/product"
 import Modal from './Modal/modal'
 import User from './User/user'
+import React from 'react'
 
 class App extends React.Component {
   constructor(props) {
@@ -12,27 +13,30 @@ class App extends React.Component {
 
     this.state = {
       users: [
-        {id: 1, name: "Ali"},
-        {id: 2, name: "Amin"},
-        {id: 3, name: "Amir"},
-        {id: 4, name: "Babak"},
+        {id: 1, name: "ali"},
+        {id: 2, name: "amin"},
+        {id: 3, name: "amir"},
+        {id: 4, name: "babak"},
       ]
     }
-    setTimeout(() => {
-      this.setState({
-        users: [
-          {id: 1, name:"Qadir"},
-          {id: 2, name:"Sasan"},
-          {id: 3, name:"Mohammad"},
-          {id: 4, name:"Ashkan"},
-        ]
-      })
-    }, 5000);
+
+    this.code = 25
   }
 
+  clickHandler () {
+    alert("click shod :)")
+    this.code = 35
+  }
+
+  keyDownHandler () {
+    console.log("type shode :)")
+  }
+ 
   render() {
     return (
       <div>
+        <h1 onClick={this.clickHandler}>{this.code}</h1>
+        <input type="text" onKeyDown={this.keyDownHandler} />
         <User {...this.state.users[0]}></User>
         <User {...this.state.users[1]}></User>
         <User {...this.state.users[2]}></User>
@@ -41,5 +45,13 @@ class App extends React.Component {
     )
   }
 }
+
+// function App() {
+//   return(
+//     <div>
+//       <Product></Product>
+//     </div>
+//   )
+// }
 
 export default App
