@@ -381,3 +381,16 @@ import User from './User/user'
 
 // export default DoubleClickText
 
+import Counter from './Counter/counter'
+
+class App extends Component {
+  render() {
+    return(
+      <div>
+        <Counter></Counter>
+      </div>
+    )
+  }
+}
+
+export default App
