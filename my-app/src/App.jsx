@@ -277,25 +277,103 @@ import User from './User/user'
 
 // export default CharacterCounter
 
-class ToggleText extends Component {
+// class ToggleText extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {show: false};
+//     this.handleClick = this.handleClick.bind(this)
+//   }
+
+//   handleClick() {
+//     this.setState(prev => ({show: !prev.show}))
+//   }
+
+//   render() {
+//     return(
+//       <div>
+//         <button className='btn' onClick={this.handleClick}>show/hide</button>
+//         {this.state.show && <p>Hello React</p>}
+//       </div>
+//     )
+//   }
+// }
+
+// export default ToggleText
+
+// class ColorBox extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {bg: "white"};
+//     this.changeColor = this.changeColor.bind(this)
+//   }
+
+//   changeColor() {
+//     this.setState(prev => (
+//       {
+//         bg: prev.bg === "white" ? "yellow" : "white"
+//       }
+//     ))
+//   }
+
+//   render() {
+//     return(
+//       <div>
+//         <button className='btn' onClick={this.changeColor}>Changing Color</button>
+//         <div style={{
+//           width: 100,
+//           height: 100,
+//           backgroundColor: this.state.bg
+//         }}></div>
+//       </div>
+//     )
+//   }
+// }
+
+// export default ColorBox
+
+// class ClickerCounter extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {clicks: 0}
+//     this.addClick = this.addClick.bind(this)
+//   }
+
+//   addClick() {
+//     this.setState(prev => (
+//       {
+//         clicks: prev.clicks + 1
+//       }
+//     ))
+//   }
+
+//   render() {
+//     return(
+//       <div>
+//         <button onClick={this.addClick}>click here</button>
+//         <p>Clicks count: {this.state.clicks}</p>
+//       </div>
+//     )
+//   }
+// }
+
+// export default ClickerCounter
+
+class DoubleClickText extends Component {
   constructor(props) {
-    super(props)
-    this.state = {show: false};
-    this.handleClick = this.handleClick.bind(this)
+    super(props);
+    this.state = {text: "Hello"}
+    this.changeText = this.changeText.bind(this);
   }
 
-  handleClick() {
-    this.setState(prev => ({show: !prev.show}))
+  changeText () {
+    this.setState({text: "GoodBye"})
   }
 
   render() {
     return(
-      <div>
-        <button className='btn' onClick={this.handleClick}>show/hide</button>
-        {this.state.show && <p>Hello React</p>}
-      </div>
+      <p onDoubleClick={this.changeText}>{this.state.text}</p>
     )
   }
 }
 
-export default ToggleText
+export default DoubleClickText
