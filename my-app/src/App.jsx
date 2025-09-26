@@ -17,29 +17,32 @@ import User from './User/user'
 //         {id: 2, name: "amin"},
 //         {id: 3, name: "amir"},
 //         {id: 4, name: "babak"},
-//       ]
+//       ],
+//       count: 0
 //     }
-//     this.clickHandler = this.clickHandler.bind(this)
-//     this.code = 25
-//   }
-
-//   clickHandler () {
-//     alert("click shod :)")
-//     this.code = 55
-//     console.log(this)
-//   }
-
-//   keyDownHandler () {
-//     console.log("type shode :)")
 //   }
  
+//   chageUserHandler () {
+//     // this.setState(
+//     //   {
+//     //     users: [
+//     //     {id: 1, name: "qadir"},
+//     //     {id: 2, name: "sasan"},
+//     //     {id: 3, name: "mohammad"},
+//     //     {id: 4, name: "ashkan"},
+//     //     ]
+//     //   }
+//     // )
+//     this.setState((prevState) => {
+//       return {count: prevState.count + 1}
+//     })
+//   }
+
 //   render() {
 //     return (
 //       <div>
-//         {/* <h1 onClick={this.clickHandler.bind(this)}>{this.code}</h1> */}
-//         {/* <h1 onClick={() => {this.clickHandler()}}>{this.code}</h1> */}
-//         <h1 onClick={this.clickHandler}>{this.code}</h1>
-//         <input type="text" onKeyDown={this.keyDownHandler} />
+//         <h1>{this.state.count}</h1>
+//         <button onClick={this.chageUserHandler.bind(this)}>Change User</button>
 //         <User {...this.state.users[0]}></User>
 //         <User {...this.state.users[1]}></User>
 //         <User {...this.state.users[2]}></User>
@@ -358,22 +361,22 @@ import User from './User/user'
 
 // export default ClickerCounter
 
-class DoubleClickText extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {text: "Hello"}
-    this.changeText = this.changeText.bind(this);
-  }
+// class DoubleClickText extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {text: "Hello"}
+//     this.changeText = this.changeText.bind(this);
+//   }
 
-  changeText () {
-    this.setState({text: "GoodBye"})
-  }
+//   changeText () {
+//     this.setState({text: "GoodBye"})
+//   }
 
-  render() {
-    return(
-      <p onDoubleClick={this.changeText}>{this.state.text}</p>
-    )
-  }
-}
+//   render() {
+//     return(
+//       <p onDoubleClick={this.changeText}>{this.state.text}</p>
+//     )
+//   }
+// }
 
-export default DoubleClickText
+// export default DoubleClickText
