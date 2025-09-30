@@ -382,12 +382,14 @@ import User from './User/user'
 // export default DoubleClickText
 
 import Counter from './Counter/counter'
+import Temp from './Temperature Display/temperature'
 
 class App extends Component {
   render() {
     return(
       <div>
-        <Counter></Counter>
+        {/* <Counter></Counter> */}
+        <Temp></Temp>
       </div>
     )
   }
