@@ -381,15 +381,46 @@ import User from './User/user'
 
 // export default DoubleClickText
 
-import Counter from './Counter/counter'
-import Temp from './Temperature Display/temperature'
+// import Counter from './Counter/counter'
+// import Temp from './Temperature Display/temperature'
+
+// class App extends Component {
+//   render() {
+//     return(
+//       <div>
+//         {/* <Counter></Counter> */}
+//         {/* <Temp></Temp> */}
+//       </div>
+//     )
+//   }
+// }
+
+// export default App
+
+// import React from 'react'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      name: "Sabzlearn"
+    }
+  } 
+
+  clickHandler(num1 , num2, event) {
+    console.log(`num1: ${num1}\nnum2: ${num2} \nsum: ${num1 + num2}`);
+    console.log(event.target.innerHtml);
+    
+  }
+
   render() {
     return(
       <div>
-        {/* <Counter></Counter> */}
-        <Temp></Temp>
+        <h1>{this.state.name}</h1>
+        {/* <button onClick={this.clickHandler.bind(this, 12, 7)}>Click here</button> */}
+        {/* <button onClick={()=> this.clickHandler(3,7)}>Click here</button> */}
+        <button onClick={(event)=> this.clickHandler(3,7,event)}>Click here</button>
       </div>
     )
   }

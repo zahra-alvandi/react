@@ -45,7 +45,7 @@ body {
   background-color: rgba(131, 127, 184, 0.2);
 }
 
-.parent li {
+/* .parent li {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -57,4 +57,4 @@ body {
   font-size: 14px;
   box-shadow: 4px 4px 5px rgb(116, 114, 114);
   background-color: lightskyblue;
-}
+} */
