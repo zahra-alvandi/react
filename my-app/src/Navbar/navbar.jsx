@@ -19,7 +19,7 @@ class User extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-default fixed-top navbar-dark" id="mainNav">
+            <nav className="navbar navbar-default fixed-top navbar-dark" id="mainNav">
 
                 <div className="container">
 
