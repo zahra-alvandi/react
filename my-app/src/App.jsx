@@ -6,6 +6,19 @@ import './App.css'
 import Product from "./Product/product"
 import Modal from './Modal/modal'
 import User from './User/user'
+import Navbar from "./Navbar/navbar"
+
+class App extends Component {
+  render() {
+    return(
+      <div>
+        <Navbar></Navbar>
+      </div>
+    )
+  }
+}
+
+export default App
 
 // class App extends React.Component {
 //   constructor(props) {
@@ -481,46 +494,46 @@ import User from './User/user'
 
 // export default App
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      age : 19
-    }
-  }
+// class App extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+//       age : 19
+//     }
+//   }
 
-  // render() {
-  //   let errorMessage = null
-  //   if(this.state.age < 18) {
-  //     errorMessage = <h1>شما محاز به ورود نیستید</h1>
-  //   } else {
-  //     errorMessage = <h1>شما مجاز به ورود هستید</h1>
-  //   }
+//   // render() {
+//   //   let errorMessage = null
+//   //   if(this.state.age < 18) {
+//   //     errorMessage = <h1>شما محاز به ورود نیستید</h1>
+//   //   } else {
+//   //     errorMessage = <h1>شما مجاز به ورود هستید</h1>
+//   //   }
     
-  //   return(
-  //     <div>
-  //       {errorMessage}
-  //     </div>
-  //   )
-  // }
+//   //   return(
+//   //     <div>
+//   //       {errorMessage}
+//   //     </div>
+//   //   )
+//   // }
 
-  // render() {
-  //   return(
-  //     <div>
-  //       {this.state.age < 18 && (
-  //         <h1>شما مجاز به ورود نیستید</h1>
-  //       )}
-  //     </div>
-  //   )
-  // }
+//   // render() {
+//   //   return(
+//   //     <div>
+//   //       {this.state.age < 18 && (
+//   //         <h1>شما مجاز به ورود نیستید</h1>
+//   //       )}
+//   //     </div>
+//   //   )
+//   // }
 
-  render() {
-    return(
-      <div>
-        شما مجاز به ورود به سایت : {this.state.age > 18 ? "yes" : "no"}
-      </div>
-    )
-  }
-}
+//   render() {
+//     return(
+//       <div>
+//         شما مجاز به ورود به سایت : {this.state.age > 18 ? "yes" : "no"}
+//       </div>
+//     )
+//   }
+// }
 
-export default App
+// export default App
