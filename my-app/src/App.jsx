@@ -428,24 +428,96 @@ import User from './User/user'
 
 // export default App
 
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+
+//     this.state = {
+//       text : "Hello World!"
+//     }
+//   }
+
+//   clickHandler() {
+//     alert("What are you doing here?")
+//   }
+
+//   render() {
+//     return(
+//       <div>
+//         <h1>{this.state.text}</h1>
+//         <button onClick={this.clickHandler}>Click Here</button>
+//       </div>
+//     )
+//   }
+// }
+
+// export default App
+
+// class App extends Component {
+//   constructor(props) {
+//     super(props)
+
+//     this.state = {
+//       age: 19
+//     }
+//   }
+
+//   render() {
+//     if(this.state.age > 18) {
+//       return(
+//         <div>
+//           شما وارد وبسایت شدید
+//         </div>
+//       )
+//     } else {
+//       return(
+//         <div>
+//           شما مجاز به ورود نیستید
+//         </div>
+//       )
+//     }
+//   }
+// }
+
+// export default App
+
 class App extends Component {
   constructor(props) {
-    super(props);
-
+    super(props)
     this.state = {
-      text : "Hello World!"
+      age : 19
     }
   }
 
-  clickHandler() {
-    alert("What are you doing here?")
-  }
+  // render() {
+  //   let errorMessage = null
+  //   if(this.state.age < 18) {
+  //     errorMessage = <h1>شما محاز به ورود نیستید</h1>
+  //   } else {
+  //     errorMessage = <h1>شما مجاز به ورود هستید</h1>
+  //   }
+    
+  //   return(
+  //     <div>
+  //       {errorMessage}
+  //     </div>
+  //   )
+  // }
+
+  // render() {
+  //   return(
+  //     <div>
+  //       {this.state.age < 18 && (
+  //         <h1>شما مجاز به ورود نیستید</h1>
+  //       )}
+  //     </div>
+  //   )
+  // }
 
   render() {
     return(
       <div>
-        <h1>{this.state.text}</h1>
-        <button onClick={this.clickHandler}>Click Here</button>
+        شما مجاز به ورود به سایت : {this.state.age > 18 ? "yes" : "no"}
       </div>
     )
   }
